@@ -232,18 +232,17 @@ img {
 /**-------------TEAM-------------*/
 
 .team {
-  margin-bottom: 72px;
+  background-color: #f4f4fd;
+  padding-top: 120px;
 }
 
 .team-title {
   margin: 0 auto 72px;
 }
 
-.team-wrap {
-}
-
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   padding-left: 156px;
   padding-right: 156px;
@@ -285,6 +284,7 @@ img {
 }
 
 .portfolio-title {
+  margin: 0 auto;
   margin-bottom: 72px;
 }
 
