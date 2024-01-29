@@ -43,7 +43,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1470px;
+  max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -54,8 +54,17 @@ img {
   text-transform: uppercase;
 }
 
-#myHeader {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section-title {
@@ -83,8 +92,6 @@ img {
 .header-container {
   display: flex;
   align-items: center;
-  padding-left: 156px;
-  padding-right: 156px;
 }
 
 .header-logo {
@@ -137,7 +144,6 @@ img {
 
 .header-address-link {
   color: #434455;
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -170,21 +176,23 @@ img {
   max-width: 496px;
   margin: 0 auto 48px;
 }
+
 .hero-order-btn {
-  padding: 16px 32px;
   color: #fff;
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  cursor: pointer;
-  background-color: #4d5ae5;
-
-  margin: 0 auto;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background-color: #4d5ae5;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  margin: 0 auto;
 }
 
 .hero-order-btn:hover,
@@ -196,6 +204,9 @@ img {
 /**----------FEATURES------------*/
 
 .features {
+}
+
+.features-container {
   background: #fff;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -204,12 +215,10 @@ img {
 .features-list {
   display: flex;
   gap: 24px;
-  padding-left: 156px;
-  padding-right: 156px;
 }
 
 .features-item {
-  width: calc((100% - 72px) / 3);
+  width: calc((100% - 72px) / 4);
 }
 
 .features-subtitle {
@@ -244,18 +253,19 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  padding-left: 156px;
-  padding-right: 156px;
 }
 
 .team-item {
-  background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
-
+  background-color: #fff;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   width: calc((100% - 72px) / 4);
+}
+
+.team-img {
+  margin-bottom: 32px;
 }
 
 .team-card {
@@ -265,6 +275,16 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+}
+
+.foto-content {
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
 }
 
 .team-text {
@@ -298,14 +318,31 @@ img {
   /*column-gap: 24px;
   row-gap: 48px;*/
   gap: 48px 24px;
-  padding-left: 156px;
-  padding-right: 156px;
 }
 
 .portfolio-item {
   border: 1px solid #e7e9fc;
   background: #fff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   width: calc((100% - 48px) / 3);
+}
+
+.portfolio-img {
+  margin-bottom: 32px;
+}
+
+.portfolio-content {
+  display: flex;
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  padding-bottom: 32px;
 }
 
 .portfolio-subtitle {
